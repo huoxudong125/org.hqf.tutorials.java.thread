@@ -1,6 +1,7 @@
 package org.hqf.tutorials.java.thread.threadPool;
 
 import org.hqf.tutorials.java.thread.common.MyCallable;
+import org.hqf.tutorials.java.thread.common.MyRunnableWithException;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
@@ -24,6 +25,11 @@ public class ThreadDemo {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
+    }
+
+    public void throwException(){
+        Thread thread=new Thread(new MyRunnableWithException());
+        thread.start();
     }
 
 
