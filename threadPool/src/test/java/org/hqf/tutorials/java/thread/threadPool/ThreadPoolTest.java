@@ -7,7 +7,7 @@ public class ThreadPoolTest {
 
     @Test
     public void getThreadResultByFuture() {
-        ThreadPoolDemo threadPool=new ThreadPoolDemo();
+        ThreadDemo threadPool=new ThreadDemo();
         threadPool.getThredResultByFuture();
 
     }
@@ -17,6 +17,12 @@ public class ThreadPoolTest {
     public void getThreadPoolResultByFuture() {
         ThreadPoolDemo threadPool=new ThreadPoolDemo();
         threadPool.getThredPoolResultByFuture();
+
+    }
+    @Test
+    public void getThreadPoolRunnableResultByFuture() {
+        ThreadPoolDemo threadPool=new ThreadPoolDemo();
+        threadPool.getThredPoolRunaleResultByFuture();
 
     }
 
