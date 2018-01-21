@@ -19,10 +19,15 @@ public class ThreadDemoTest {
     public void getThredResultByFuture() {
     }
 
-    @Test(expected = ArithmeticException.class)
+    @Test(expected = RuntimeException.class)
     public void throwException() {
         threadDemo.throwException();
     }
+
+
+
+
+
 
 
 }
