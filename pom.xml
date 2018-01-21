@@ -11,6 +11,7 @@
     <modules>
         <module>threadPool</module>
         <module>common</module>
+        <module>countDownLantch</module>
     </modules>
 
 

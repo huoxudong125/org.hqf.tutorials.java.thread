@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common" />
+        <module name="countDownLantch" />
         <module name="threadPool" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.5" />
+      <module name="countDownLantch" target="1.5" />
       <module name="multithread" target="1.5" />
       <module name="threadPool" target="1.5" />
     </bytecodeTargetLevel>
