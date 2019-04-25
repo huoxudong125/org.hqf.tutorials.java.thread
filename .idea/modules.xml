@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/countDownLantch/countDownLantch.iml" filepath="$PROJECT_DIR$/countDownLantch/countDownLantch.iml" />
       <module fileurl="file://$PROJECT_DIR$/multithread.iml" filepath="$PROJECT_DIR$/multithread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/threadErrorDemo/threadErrorDemo.iml" filepath="$PROJECT_DIR$/threadErrorDemo/threadErrorDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/threadPool/threadPool.iml" filepath="$PROJECT_DIR$/threadPool/threadPool.iml" />
     </modules>
   </component>

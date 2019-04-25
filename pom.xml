@@ -12,6 +12,7 @@
         <module>threadPool</module>
         <module>common</module>
         <module>countDownLantch</module>
+        <module>threadErrorDemo</module>
     </modules>
 
 

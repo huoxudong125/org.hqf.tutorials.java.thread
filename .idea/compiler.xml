@@ -9,12 +9,14 @@
         <module name="common" />
         <module name="countDownLantch" />
         <module name="threadPool" />
+        <module name="threadErrorDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.5" />
       <module name="countDownLantch" target="1.5" />
       <module name="multithread" target="1.5" />
+      <module name="threadErrorDemo" target="1.5" />
       <module name="threadPool" target="1.5" />
     </bytecodeTargetLevel>
   </component>
