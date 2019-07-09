@@ -13,6 +13,7 @@
         <module>common</module>
         <module>countDownLantch</module>
         <module>threadErrorDemo</module>
+        <module>lock-test</module>
     </modules>
 
 
