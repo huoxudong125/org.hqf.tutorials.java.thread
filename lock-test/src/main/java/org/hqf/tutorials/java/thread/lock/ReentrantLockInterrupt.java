@@ -17,25 +17,36 @@ public class ReentrantLockInterrupt {
 
     private Lock lock = new ReentrantLock();
 
-    private int count = 0;
+    private volatile int count = 0;
+
+    public static final long HOW_MANY_TIMES = 1000;
 
     private int incrementAndGetCount() {
         try {
             // 想要能够响应中断，需使用 lock.lockInterruptibly(); 而不能是 lock.lock();
             lock.lockInterruptibly();
+            while (count < HOW_MANY_TIMES) {
 
-            System.out.println(Thread.currentThread().getName() + " gets Count: " + count);
-            return count++;
+                System.out.println(Thread.currentThread().getName() + " gets Count: " + count++);
+                if (Thread.currentThread().isInterrupted()) {
+                    System.out.println(Thread.currentThread().getName() + "Someone interrupted me.");
+                } else {
+                    System.out.println(Thread.currentThread().getName() + "Thread is Going...");
+                }
+            }
+
+
+            return count;
         } catch (Exception e) {
             return 0;
         } finally {
             // 并没有在 finally 中释放锁
-            // lock.unlock();
+            lock.unlock();
         }
     }
 
     public static void main(String[] args) {
-      final ReentrantLockInterrupt test = new ReentrantLockInterrupt();
+        final ReentrantLockInterrupt test = new ReentrantLockInterrupt();
 
         Thread t1 = new Thread() {
 
@@ -69,6 +80,8 @@ public class ReentrantLockInterrupt {
 
         t2.start();
         t1.start();
+
         t2.interrupt();
+
     }
 }
